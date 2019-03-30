@@ -20,6 +20,18 @@ repositories {
     jcenter()
 }
 
+task(client, dependsOn: 'classes', type: JavaExec) {
+   main = 'socketcalculator.App'
+   classpath = sourceSets.main.runtimeClasspath
+   args ''
+}
+
+task(server, dependsOn: 'classes', type: JavaExec) {
+   main = 'socketcalculator.App'
+   classpath = sourceSets.main.runtimeClasspath
+   args ''
+}
+
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     implementation 'com.google.guava:guava:27.0.1-jre'
@@ -29,4 +41,4 @@ dependencies {
 }
 
 // Define the main class for the application
-mainClassName = 'socketCalculator.App'
+mainClassName = 'socketcalculator.App'
