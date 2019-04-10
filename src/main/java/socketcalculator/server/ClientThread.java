@@ -11,6 +11,7 @@ public class ClientThread extends Thread{
     private Socket clientSocket;
     private Server server;
     private Calculator calculator;
+    
 
     public ClientThread(Socket clientSocket, Server server){
         this.clientSocket = clientSocket;
@@ -29,7 +30,6 @@ public class ClientThread extends Thread{
         while(true){
             try{
                 String calc = this.in.readLine();
-                
                 if(calc.equals("!exit")){
                     this.out.println("goodbye");
                     break;

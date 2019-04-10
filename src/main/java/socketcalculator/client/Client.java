@@ -52,6 +52,21 @@ public class Client extends Observer{
         client.connect("localhost", 8050);
         System.out.println(client.send("!no 1 3"));
         System.out.println(client.send("!add 1 1"));
+        System.out.println(client.send("!add 1 1"));
+        System.out.println(client.send("!add 1 1"));
+        System.out.println(client.send("!add 1 1"));
+        System.out.println(client.send("!add 1 1"));
+        System.out.println(client.send("!add 1 1"));
+        System.out.println(client.send("!add 1 1"));
+        System.out.println(client.send("!add 1 1"));
+        System.out.println(client.send("!add 1 1"));
+        System.out.println(client.send("!add 1 1"));
+        System.out.println(client.send("!add 1 1"));
+        System.out.println(client.send("!add 1 1"));
+        System.out.println(client.send("!add 1 1"));
+        System.out.println(client.send("!add 1 1"));
+        System.out.println(client.send("!add 1 1"));
+        System.out.println(client.send("!add 1 1"));
         System.out.println(client.send("!exit"));
         client.disconect();
     }
