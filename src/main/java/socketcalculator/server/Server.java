@@ -32,6 +32,7 @@ public class Server extends Observable{
  
     public void stop() {
         try{
+            //for()
             serverSocket.close();
         }catch(IOException e){
 

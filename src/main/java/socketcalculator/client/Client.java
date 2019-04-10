@@ -23,7 +23,7 @@ public class Client extends Observer{
 
         }
     }
- 
+
     public String send(String msg) {
         try{
             out.println(msg);
@@ -36,7 +36,7 @@ public class Client extends Observer{
             return null;
         }
     }
- 
+
     public void disconect() {
         try{
             in.close();
@@ -50,8 +50,8 @@ public class Client extends Observer{
     public static void main(String[] args){
         Client client = new Client();
         client.connect("localhost", 8050);
-        System.out.println(client.send("hello server"));
-        System.out.println(client.send("new Test"));
+        System.out.println(client.send("!no 1 3"));
+        System.out.println(client.send("!add 1 1"));
         System.out.println(client.send("!exit"));
         client.disconect();
     }
