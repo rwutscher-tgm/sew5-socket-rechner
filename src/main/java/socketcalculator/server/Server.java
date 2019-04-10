@@ -21,7 +21,7 @@ public class Server extends Observable{
         while(true){
             try{
                 Socket clientSocket = this.serverSocket.accept();
-                ClientThread client = new ClientThread(clientSocket);
+                ClientThread client = new ClientThread(clientSocket, this);
                 client.start();
             }catch(IOException e){
 

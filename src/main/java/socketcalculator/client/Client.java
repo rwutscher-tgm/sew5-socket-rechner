@@ -28,6 +28,9 @@ public class Client extends Observer{
         try{
             out.println(msg);
             String resp = in.readLine();
+            if(msg.equals("!exit")){
+                this.disconect();
+            }
             return resp;
         }catch(IOException e){
             return null;
@@ -48,6 +51,8 @@ public class Client extends Observer{
         Client client = new Client();
         client.connect("localhost", 8050);
         System.out.println(client.send("hello server"));
+        System.out.println(client.send("new Test"));
+        System.out.println(client.send("!exit"));
         client.disconect();
     }
 }

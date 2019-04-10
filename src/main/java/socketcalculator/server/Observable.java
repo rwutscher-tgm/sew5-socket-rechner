@@ -15,5 +15,6 @@ public abstract class Observable{
     }
     public void unregister(Socket client){
         this.observers.remove(client);
+        System.out.println("unregistered");
     }
 }
